@@ -18,11 +18,57 @@
 
 ## Prérequis
 
-Avant d'exécuter le projet, vous devez installer les dépendances nécessaires.
+vant de lancer le projet, assurez-vous de disposer des éléments suivants :
 
-### 1. Cloner le dépôt
+- **Python 3.x** installé sur votre machine.
+- **Clé API OpenAI** : Vous devez avoir une clé API valide pour interagir avec OpenAI (pour le filtrage des articles).
+
+## Installation
+
+### 1. Clonez le dépôt
 
 Si vous n'avez pas encore cloné le projet, exécutez la commande suivante :
 
 ```bash
 git clone https://github.com/votre-utilisateur/ai-article-review.git
+
+### 2. Créez un environnement virtuel
+
+Dans le répertoire du projet, créez un environnement virtuel :
+python -m venv venv
+
+### 3. Activez l'environnement virtuel
+
+.\venv\Scripts\activate
+
+### 4. Installez les dépendances
+
+pip install -r requirements.txt
+
+##  Configuration
+
+Créez un fichier .env à la racine du projet et ajoutez-y votre clé API OpenAI :
+OPENAI_API_KEY=your-openai-api-key
+
+## Lancer l'application
+
+### 1. Exécutez le script d'extraction et d'interface Streamlit
+Pour démarrer l'application et exécuter le processus d'extraction et de filtrage des articles, utilisez la commande suivante :
+streamlit run app.py
+
+##  Structure du projet
+
+ai-article-review/
+├── app.py                # Application Streamlit pour l'interface utilisateur
+├── fetcher.py            # Script pour extraire les articles depuis une source d'actualités
+├── db.py                 # Script pour gérer la base de données SQLite
+├── articles.db           # Base de données SQLite contenant tous les articles extraits
+├── filtered_articles.db  # Base de données contenant les articles filtrés
+├── .env                  # Fichier de configuration contenant la clé API OpenAI
+├── .gitignore            # Fichier pour ignorer les fichiers sensibles (comme .env)
+├── requirements.txt      # Liste des dépendances du projet
+└── README.md             # Documentation du projet
+
+## Licence
+Ce projet est sous licence MIT
+
