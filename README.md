@@ -2,7 +2,7 @@
 
 ## Description
 
-**AI Article Review** est un script d'automatisation en Python permettant d'extraire des articles publiés la veille depuis une source d'actualités, de les filtrer en fonction d'un thème (par exemple, l'Intelligence Artificielle), puis de stocker les articles pertinents dans une base de données SQLite locale. L'outil propose également une interface Streamlit pour sélectionner les articles et générer un fichier PDF.
+**AI Article Review** est un script d'automatisation en Python permettant d'extraire des articles publiés la veille depuis une source d'actualités, de les filtrer en fonction d'un thème (par exemple, Business , l'Intelligence Artificielle...), puis de stocker les articles pertinents dans une base de données SQLite locale. L'outil propose également une interface Streamlit pour sélectionner les articles et générer un fichier PDF.
 
 ---
 

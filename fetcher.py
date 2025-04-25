@@ -7,13 +7,15 @@ import os
 import openai
 from db import create_database, insert_article
 
-# Charger les variables d'environnement à partir du fichier .env
-load_dotenv()
+load_dotenv(override=True)
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
-# Récupérer la clé API depuis les variables d'environnement
-openai.api_key = os.getenv("OPENAI_API_KEY")
+if openai_api_key is None:
+    print("❌ Clé manquante")
+else:
+    print("✅ Clé chargée")
+    openai.api_key = openai_api_key  # ✅ c’est ici qu’on utilise le point
 
-# openai.api_key = "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"  # ⚠️ Remplace avec ta vraie clé OpenAI
 
 # Vérifie si une URL correspond à un article
 def is_valid_article_url(href):
@@ -43,7 +45,7 @@ def is_business_related_with_trade(title):
     try:
         prompt = f"Le titre suivant est-il lié au domaine des affaires, de l'économie ou du commerce ? Réponds par OUI ou NON uniquement.\nTitre : \"{title}\""
         response = openai.ChatCompletion.create(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=[{"role": "system", "content": "Tu es un assistant qui évalue si un titre est lié au domaine des affaires, de l'économie ou du commerce."},
                       {"role": "user", "content": prompt}],
             max_tokens=5,
