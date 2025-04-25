@@ -29,10 +29,9 @@ vant de lancer le projet, assurez-vous de disposer des éléments suivants :
 
 Si vous n'avez pas encore cloné le projet, exécutez la commande suivante :
 
-```bash
 git clone https://github.com/votre-utilisateur/ai-article-review.git
 
-### 2. Créez un environnement virtuel
+#### 2. Créez un environnement virtuel
 
 Dans le répertoire du projet, créez un environnement virtuel :
 python -m venv venv
