@@ -18,7 +18,7 @@
 
 ## Prérequis
 
-vant de lancer le projet, assurez-vous de disposer des éléments suivants :
+Avant de lancer le projet, assurez-vous de disposer des éléments suivants :
 
 - **Python 3.x** installé sur votre machine.
 - **Clé API OpenAI** : Vous devez avoir une clé API valide pour interagir avec OpenAI (pour le filtrage des articles).
